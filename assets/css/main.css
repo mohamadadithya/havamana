@@ -1,0 +1,110 @@
+:root {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  list-style: none;
+}
+
+.header {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .location {
+  font-size: 1.5rem;
+}
+
+.header .toggle-lang {
+  font-size: 1.5rem;
+}
+
+.weather {
+  text-align: center;
+}
+
+.weather .icon {
+  font-size: 2.5rem;
+  margin-bottom: 6px;
+}
+
+.weather .temperature {
+  font-size: 3rem;
+  margin-bottom: 2px;
+}
+
+.weather .condition {
+  margin-bottom: 4rem;
+  text-transform: capitalize;
+}
+
+.additional {
+  text-align: left;
+  gap: 2rem;
+  margin-top: 12px;
+}
+
+.additional .title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.additional ul {
+  display: flex;
+  flex-grow: 1;
+}
+
+.additional ul li:first-child {
+  margin-bottom: 6px;
+}
+
+.copyright {
+  font-size: .8rem;
+  position: absolute;
+  bottom: 1rem;
+}
+
+/* Utility Class */
+.container {
+  margin: 0 1.5rem;
+}
+
+.fw-bold {
+  font-weight: 600;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.text-gray {
+  color: gray;
+}

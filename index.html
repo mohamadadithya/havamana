@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Havamana</title>
+  <link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1 class="location"></h1>
+        <p class="day"></p>
+        <p class="time"></p>
+      </div>
+      <a role="button" class="toggle-lang">🇲🇨</a>
+    </header>
+    <section class="weather">
+      <i class="fas fa-fw icon"></i>
+      <p class="temperature"></p>
+      <p class="condition text-gray"></p>
+      <h2 class="title">Additional Info</h2>
+      <div class="additional flex center">
+        <ul class="flex between column">
+          <div class="flex between">
+            <li class="fw-bold wind-label">Wind Speed</li>
+            <li class="text-gray wind"></li>
+          </div>
+          <div class="flex between">
+            <li class="fw-bold vis-label">Visibility</li>
+            <li class="text-gray visibility"></li>
+          </div>
+        </ul>
+        <ul class="flex between column">
+          <div class="flex between">
+            <li class="fw-bold hum-label">Humidity</li>
+            <li class="text-gray humidity"></li>
+          </div>
+          <div class="flex between">
+            <li class="fw-bold press-label">Pressure</li>
+            <li class="text-gray pressure"></li>
+          </div>
+        </ul>
+      </div>
+      <p class="copyright">
+        &copy; 2021 by <strong>Mohamad Adithya</strong>
+      </p>
+    </section>
+  </div>
+  <script src="/assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
