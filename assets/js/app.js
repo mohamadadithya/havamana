@@ -115,19 +115,19 @@ const showWeather = (data, address) => {
   if (dataDesc.includes('scattered')) {
     iconClass = `fa-cloud`
   }
-  if (dataIcon.includes('50d')) {
+  if (dataIcon.includes('50')) {
     iconClass = `fa-fog`
   }
-  if (dataIcon.includes('13d')) {
+  if (dataIcon.includes('13')) {
     iconClass = `fa-snowflake`
   }
-  if (dataIcon.includes('09d')) {
+  if (dataIcon.includes('09')) {
     iconClass = `fa-cloud-showers`
   }
-  if (dataIcon.includes('10d')) {
+  if (dataIcon.includes('10')) {
     iconClass = `fa-cloud-sun-rain`
   }
-  if (dataIcon.includes('11d')) {
+  if (dataIcon.includes('11')) {
     iconClass = `fa-thunderstorm`
   }
   weatherEl.icon.classList.add(iconClass)
