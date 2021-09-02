@@ -35,7 +35,7 @@ const bahasaIndonesia = () => {
   langConfig.lang = `id`
   langConfig.localeLang = `id-ID`
   additionalEl.title.innerText = `Info Tambahan`
-  additionalLabels.wind.innerText = `Kecepatan Angin`
+  additionalLabels.wind.innerText = `Angin`
   additionalLabels.visibility.innerText = `Visibilitas`
   additionalLabels.humidity.innerText = `Kelembaban`
   additionalLabels.pressure.innerText = `Tekanan`
@@ -46,7 +46,7 @@ const english = () => {
   langConfig.lang = `en`
   langConfig.localeLang = `en-US`
   additionalEl.title.innerText = `Additional Info`
-  additionalLabels.wind.innerText = `Wind Speed`
+  additionalLabels.wind.innerText = `Wind`
   additionalLabels.visibility.innerText = `Visibility`
   additionalLabels.humidity.innerText = `Humidity`
   additionalLabels.pressure.innerText = `Pressure`
