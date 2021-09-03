@@ -31,6 +31,8 @@ let langConfig = {
   localeLang: `en-US`
 }
 
+const toggle = document.querySelector('.toggle-lang')
+
 const bahasaIndonesia = () => {
   langConfig.lang = `id`
   langConfig.localeLang = `id-ID`
@@ -53,15 +55,18 @@ const english = () => {
   toggle.innerText = `🇲🇨`
 }
 
-const toggle = document.querySelector('.toggle-lang')
 toggle.onclick = () => {
   toggle.classList.toggle('id')
-  if (toggle.classList.contains('id')) {
-    bahasaIndonesia()
-  } else {
-    english()
+  localStorage.setItem('lang', 'id')
+  checkLanguage()
+}
+
+const checkStorage = () => {
+  let storageLang = localStorage.getItem('lang')
+  if (storageLang) {
+    toggle.classList.add(storageLang)
   }
-  getLocation()
+  checkLanguage()
 }
 
 const getLocation = () => {
@@ -134,6 +139,7 @@ const showWeather = (data, address) => {
   weatherEl.temperature.innerText = `${data.main.temp}°c`
   weatherEl.condition.innerText = data.weather[0].description
   additionalInfo(data)
+  console.log(data)
 }
 
 const additionalInfo = (data) => {
@@ -177,7 +183,7 @@ const changeBackground = () => {
   if (hours >= 16 && hours <= 19) {
     bgColor = `#ff9200`
   }
-  if (hours >= 19) {
+  if (hours > 19 || hours < 4) {
     bgColor = `#272652`
     textColor = `#FFFFFF`
   }
@@ -186,6 +192,16 @@ const changeBackground = () => {
   body.style.color = textColor
 }
 
-changeBackground()
+const checkLanguage = () => {
+  if (toggle.classList.contains('id')) {
+    bahasaIndonesia()
+  } else {
+    english()
+    localStorage.removeItem('lang')
+  }
+  getLocation()
+}
 
-getLocation()
+checkStorage()
+
+changeBackground()
